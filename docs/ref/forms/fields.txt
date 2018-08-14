@@ -1223,6 +1223,10 @@ method::
 
         Same as :class:`ModelChoiceField.to_field_name`.
 
+    .. method:: ModelMultipleChoiceField.validate_choices(qs, field_name, selected_choices)
+
+        .. versionadded:: 2.2
+
 Creating custom fields
 ======================
 

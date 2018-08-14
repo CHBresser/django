@@ -155,7 +155,9 @@ File Uploads
 Forms
 ~~~~~
 
-* ...
+* The new :meth:`ModelMultipleChoiceField.validate_choices` method
+  allows you to not evaluate the queryset but instead validate the
+  input manually. 
 
 Generic Views
 ~~~~~~~~~~~~~

@@ -1317,6 +1317,9 @@ class ModelMultipleChoiceField(ModelChoiceField):
                     params={'pk': pk},
                 )
         qs = self.queryset.filter(**{'%s__in' % key: value})
+        return self.validate_choices(qs, key, value)
+
+    def validate_choices(self, qs, field_name, selected_choices):
         pks = {str(getattr(o, key)) for o in qs}
         for val in value:
             if str(val) not in pks:
